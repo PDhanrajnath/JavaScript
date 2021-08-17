@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function localStorageCounter() {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result1").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  }
+
+  function sessionStorageCounter() {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result2").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s).";
+  }
+
+
+</script>
+</head>
+<body>
+
+<p><button onclick="localStorageCounter()" type="button">Click me!</button></p>
+<div id="result1"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+<hr>
+<br>
+<br>
+<p><button onclick="sessionStorageCounter()" type="button">Click me!</button></p>
+<div id="result2"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will reset).</p>
+
+</body>
+</html>
