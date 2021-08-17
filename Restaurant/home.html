@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Zemoso Restaurant</title>
+</head>
+<body>
+
+    <div>
+        <h2>Zemoso Restaurant</h2>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-4">
+            <h1>Tables</h1>
+
+            <input type="text" id="searchTable" placeholder="search table..." onkeyup="searchTable()">
+
+            <div class="tablelist" id="Table1" ondragover="allowDrop(event)" ondrop="drop(event,this)">
+                <h3>Table-1</h3>
+                <br>
+                <p id="itemsTable1">Items:  </p>
+                <p id="priceTable1">Price:  </p>
+                <button id="billTable1" class="btn btn-info" onclick="showTable('popupTable1')">Generate Bill</button>
+            </div>
+
+            <div class="tablelist" id="Table2" ondragover="allowDrop(event)" ondrop="drop(event,this)">
+                <h3>Table-2</h3>
+                <br>
+                <p id="itemsTable2">Items:  </p>
+                <p id="priceTable2">Price:  </p>
+                <button style="text-align: right;" id="billTable2" class="btn btn-info" onclick="showTable('popupTable2')">Generate Bill</button>
+            </div>
+
+        </div>
+
+        <div class="col-8">
+            <h1 >Menu</h1>
+
+            <input type="text" id="searchFood" placeholder="search food..." onkeyup="searchFood()">
+
+            <div class="list" id="food1" draggable="true" ondragstart="drag(event)">Chicken Manchurian Rs-10</div>
+            <div class="list" id="food2" draggable="true" ondragstart="drag(event)">Chicken Rice Rs-10</div>
+            <div class="list" id="food3" draggable="true" ondragstart="drag(event)">Chicken Fried Rice Rs-10</div>
+            <div class="list" id="food4" draggable="true" ondragstart="drag(event)">Chicken Biryani   Rs-10</div>
+            <div class="list" id="food5" draggable="true" ondragstart="drag(event)">Chicken Noodles Rs-10</div>
+
+            <div class="list" id="food6" draggable="true" ondragstart="drag(event)">Veg Manchurian Rs-10</div>
+            <div class="list" id="food7" draggable="true" ondragstart="drag(event)">Veg Rice Rs-10</div>
+            <div class="list" id="food8" draggable="true" ondragstart="drag(event)">Veg Fried Rice Rs-10</div>
+            <div class="list" id="food9" draggable="true" ondragstart="drag(event)">Veg Biryani   Rs-10</div>
+            <div class="list" id="food10" draggable="true" ondragstart="drag(event)">Veg Noodles Rs-10</div>
+
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>
