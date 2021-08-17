@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <title>Zemoso</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-4">
+            <h3 style="text-align: center;">TAbles here</h3>
+            <div class="tableitem" id="table1" ondragover="allowDrop(event)" ondrop="drop(event,this)"><h3>Table-1</h3><br>
+                <p id="itemst1">Items:  </p>
+                <p id="totalt1">Total:   </p>
+                <button id='view1' class="btn btn-primary" onclick="showTable('t1')">View Order Details</button>
+                <!--MODAL DIV-->
+                <div id="my-modal-t1" class="modal">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2>Order Deails</h2>
+                      <span class="close" onclick="closeTable('t1')">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                      <table  class="table table-striped" id="t1">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>delete</th>
+                        </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="modal-footer">
+                      <button id='reset1' class="btn btn-danger" onclick="resetTable('t1')">Reset The Table</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- <div class="row"> -->
+        <div class="col-8">
+            <h3 style="text-align: center;">MEnu List here</h3>
+        </div>
+    <!-- </div> -->
+</body>
+</html>

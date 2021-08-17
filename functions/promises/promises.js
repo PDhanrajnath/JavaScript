@@ -1,6 +1,6 @@
 var promise = new Promise(function(resolve, reject) {
     const x = "promise";
-    const y = "Promise"
+    const y = "promise"
     if(x === y) {
         resolve();
     } else {
