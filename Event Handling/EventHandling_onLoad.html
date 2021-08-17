@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+     <head>
+     <script type="text/javascript">
+     function time()
+     {
+          var d = new Date();
+          var ty = d.getHours() + ":"+d.getMinutes()+":"+d.getSeconds();
+          document.eventHandle.time.value=ty;
+          setInterval("time()",1000)
+     }
+     </script>
+     </head>
+<body onload="time()">
+     <h2>Displaying Time</h2>
+          <form name="eventHandle">
+               <input type=text name=time size="8">
+          </form>
+</body>
+</html>
